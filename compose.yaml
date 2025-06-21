@@ -1,0 +1,10 @@
+name: vector_db
+
+services:
+  qdrant:
+    image: qdrant/qdrant:latest
+    volumes:
+      - "./qdrant/storage:/qdrant/storage/"
+    ports:
+      - "6333:6333"
+      - "6334:6334"
