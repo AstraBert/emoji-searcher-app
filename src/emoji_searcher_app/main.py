@@ -14,7 +14,11 @@ RETRIEVER = Retriever(
 
 
 def search_emoji(text: str) -> List[str]:
-    return RETRIEVER.retrieve(text)
+    res = RETRIEVER.retrieve(text)
+    if len(res) < 5:
+        for j in range(len(res), 5):
+            res.append("**No result**")
+    return res
 
 
 iface = gr.Interface(

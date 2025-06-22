@@ -11,3 +11,5 @@ wheels/
 
 # storage
 qdrant/
+.pytest_cache/
+.ruff_cache/
